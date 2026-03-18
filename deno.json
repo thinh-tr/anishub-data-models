@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "@std/assert": "jsr:@std/assert@^1.0.19",
+    "@std/uuid": "jsr:@std/uuid@^1.1.0",
+    "eld": "npm:eld@^2.0.2"
+  }
+}
