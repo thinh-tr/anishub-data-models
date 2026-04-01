@@ -70,68 +70,69 @@ export class MetaData implements DBData {
     }
 }
 
-// // html content
-// export class HTMLContent implements DBData {
-//     id: string;
-//     pageId: string;
-//     htmlData: string;
+// html content
+export class HTMLContent implements DBData {
+    id: string;
+    pageId: string;
+    htmlData: string;
 
-//     constructor(id: string, pageId: string, htmlData: string) {
-//         this.id = id;
-//         this.pageId = pageId;
-//         this.htmlData = htmlData;
-//     }
+    constructor(id: string, pageId: string, htmlData: string) {
+        this.id = id;
+        this.pageId = pageId;
+        this.htmlData = htmlData;
+    }
 
-//     // Kiểm tra hợp lệ
-//     isValid(): boolean {
-//         if (!v4.validate(this.id)) return false;
-//         if (!v4.validate(this.pageId)) return false;
-//         if (!validateHTMLString(this.htmlData)) return false;
-//         return true;
-//     }
+    // Kiểm tra hợp lệ
+    isValid(): boolean {
+        if (!v4.validate(this.id)) return false;
+        if (!v4.validate(this.pageId)) return false;
+        if (!validateHTMLString(this.htmlData)) return false;
+        return true;
+    }
 
-//     // log data
-//     logData(): void {
-//         console.log(`
-//         id: ${this.id}
-//         page id: ${this.pageId}
-//         html data: ${this.htmlData}
-//         `);
-//     }
-// }
+    // log data
+    logData(): void {
+        console.log(`
+        id: ${this.id}
+        page id: ${this.pageId}
+        html data: 
+            ${this.htmlData}
+        `);
+    }
+}
 
-// export class Image implements DBData {
-//     id: string;
-//     pageId: string;
-//     imageUrl: string;
-//     altText: string;
-//     source: string;
+export class Image implements DBData {
+    id: string;
+    pageId: string;
+    imageUrl: string;
+    altText: string;
+    source: string;
 
-//     constructor(id: string, pageId: string, imageUrl: string, altText: string, source: string) {
-//         this.id = id;
-//         this.pageId = pageId;
-//         this.imageUrl = imageUrl;
-//         this.altText = altText;
-//         this.source = source;
-//     }
+    constructor(id: string, pageId: string, imageUrl: string, altText: string, source: string) {
+        this.id = id;
+        this.pageId = pageId;
+        this.imageUrl = imageUrl;
+        this.altText = altText;
+        this.source = source;
+    }
 
-//     // Kiểm tra hợp lệ
-//     isValid(): boolean {
-//         if (!v4.validate(this.id)) return false;
-//         if (!v4.validate(this.pageId)) return false;
-//         if (!isValidUrl(this.imageUrl)) return false;
-//         if (!isValidStringWithMinLen(this.altText, 2)) return false;
-//         if (!isValidUrl(this.source)) return false;
-//         return true;
-//     }
+    // Kiểm tra hợp lệ
+    isValid(): boolean {
+        if (!v4.validate(this.id)) return false;
+        if (!v4.validate(this.pageId)) return false;
+        if (!isValidUrl(this.imageUrl)) return false;
+        if (!isValidStringWithMinLen(this.altText, 2)) return false;
+        if (!isValidUrl(this.source)) return false;
+        return true;
+    }
 
-//     logData(): void {
-//         console.log(`
-//         id: ${this.id}
-//         page id: ${this.pageId}
-//         image url: ${this.imageUrl}
-//         alt text: ${this.altText}
-//         source: ${this.source}
-//         `);
-//     }
-// }
+    logData(): void {
+        console.log(`
+        id: ${this.id}
+        page id: ${this.pageId}
+        image url: ${this.imageUrl}
+        alt text: ${this.altText}
+        source: ${this.source}
+        `);
+    }
+}
