@@ -1,6 +1,6 @@
 import { assert, assertFalse, assertEquals } from "@std/assert";
 import { generateV4UUID } from "../src/helper-funcs.ts";
-import { Page, MetaData, HTMLContent, Image, PageLinks, PageStatus } from "../src/data-models.ts";
+import { Page, MetaData, HTMLContent, Image, PageLinks, PageStatus } from "../src/maria-entities.ts";
 import { DataType, MariaDateTime, CrawlStatus } from "../src/types.ts";
 
 Deno.test("Page class test", (): void => {
